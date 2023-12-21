@@ -1,8 +1,11 @@
 <?php
 
 require 'modell/DBConn.php';
+require 'modell/Tables.php';
 
 interface IMethods {
+
+    public function buildTable(): Tables;
 
     public function Create(object $object): bool;
 

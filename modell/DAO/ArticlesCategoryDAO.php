@@ -67,4 +67,8 @@ class ArticlesCategoryDAO implements IMethods {
             throw new Exception("Error de base de datos: " . $exc->getMessage());
         }
     }
+
+    public function buildTable(): \Tables {
+        
+    }
 }

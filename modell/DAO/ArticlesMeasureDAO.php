@@ -23,4 +23,8 @@ class ArticlesMeasureDAO implements IMethods {
     public function ReadByID(int $id): ?object {
         
     }
+
+    public function buildTable(): \Tables {
+        
+    }
 }
