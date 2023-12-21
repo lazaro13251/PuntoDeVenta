@@ -2,19 +2,19 @@
 
 class Customers {
 
-    private int $idCustomers;
-    private string $nameCustomers;
-    private string $paternalCustomers;
-    private string $maternalCustomers;
-    private string $mailCustomers;
-    private string $phoneCustomers;
-    private string $birthCustomers;
-    private int $categoryCustomers;
-    private int $activeCustomers;
-    private DateTime $createdCustomers;
-    private DateTime $updatedCustomers;
+    private $idCustomers;
+    private $nameCustomers;
+    private $paternalCustomers;
+    private $maternalCustomers;
+    private $mailCustomers;
+    private $phoneCustomers;
+    private $birthCustomers;
+    private $categoryCustomers;
+    private $activeCustomers;
+    private $createdCustomers;
+    private $updatedCustomers;
 
-    public function __construct(int $idCustomers, string $nameCustomers, string $paternalCustomers, string $maternalCustomers, string $mailCustomers, string $phoneCustomers, string $birthCustomers, int $categoryCustomers, int $activeCustomers, DateTime $createdCustomers, DateTime $updatedCustomers) {
+    public function __construct($idCustomers, $nameCustomers, $paternalCustomers, $maternalCustomers, $mailCustomers, $phoneCustomers, $birthCustomers, $categoryCustomers, $activeCustomers, $createdCustomers, $updatedCustomers) {
         $this->idCustomers = $idCustomers;
         $this->nameCustomers = $nameCustomers;
         $this->paternalCustomers = $paternalCustomers;
@@ -28,91 +28,91 @@ class Customers {
         $this->updatedCustomers = $updatedCustomers;
     }
 
-    public function getIdCustomers(): int {
+    public function getIdCustomers() {
         return $this->idCustomers;
     }
 
-    public function getNameCustomers(): string {
+    public function getNameCustomers() {
         return $this->nameCustomers;
     }
 
-    public function getPaternalCustomers(): string {
+    public function getPaternalCustomers() {
         return $this->paternalCustomers;
     }
 
-    public function getMaternalCustomers(): string {
+    public function getMaternalCustomers() {
         return $this->maternalCustomers;
     }
 
-    public function getMailCustomers(): string {
+    public function getMailCustomers() {
         return $this->mailCustomers;
     }
 
-    public function getPhoneCustomers(): string {
+    public function getPhoneCustomers() {
         return $this->phoneCustomers;
     }
 
-    public function getBirthCustomers(): string {
+    public function getBirthCustomers() {
         return $this->birthCustomers;
     }
 
-    public function getCategoryCustomers(): int {
+    public function getCategoryCustomers() {
         return $this->categoryCustomers;
     }
 
-    public function getActiveCustomers(): int {
+    public function getActiveCustomers() {
         return $this->activeCustomers;
     }
 
-    public function getCreatedCustomers(): DateTime {
+    public function getCreatedCustomers() {
         return $this->createdCustomers;
     }
 
-    public function getUpdatedCustomers(): DateTime {
+    public function getUpdatedCustomers() {
         return $this->updatedCustomers;
     }
 
-    public function setIdCustomers(int $idCustomers): void {
+    public function setIdCustomers($idCustomers): void {
         $this->idCustomers = $idCustomers;
     }
 
-    public function setNameCustomers(string $nameCustomers): void {
+    public function setNameCustomers($nameCustomers): void {
         $this->nameCustomers = $nameCustomers;
     }
 
-    public function setPaternalCustomers(string $paternalCustomers): void {
+    public function setPaternalCustomers($paternalCustomers): void {
         $this->paternalCustomers = $paternalCustomers;
     }
 
-    public function setMaternalCustomers(string $maternalCustomers): void {
+    public function setMaternalCustomers($maternalCustomers): void {
         $this->maternalCustomers = $maternalCustomers;
     }
 
-    public function setMailCustomers(string $mailCustomers): void {
+    public function setMailCustomers($mailCustomers): void {
         $this->mailCustomers = $mailCustomers;
     }
 
-    public function setPhoneCustomers(string $phoneCustomers): void {
+    public function setPhoneCustomers($phoneCustomers): void {
         $this->phoneCustomers = $phoneCustomers;
     }
 
-    public function setBirthCustomers(string $birthCustomers): void {
+    public function setBirthCustomers($birthCustomers): void {
         $this->birthCustomers = $birthCustomers;
     }
 
-    public function setCategoryCustomers(int $categoryCustomers): void {
+    public function setCategoryCustomers($categoryCustomers): void {
         $this->categoryCustomers = $categoryCustomers;
     }
 
-    public function setActiveCustomers(int $activeCustomers): void {
+    public function setActiveCustomers($activeCustomers): void {
         $this->activeCustomers = $activeCustomers;
     }
 
-    public function setCreatedCustomers(DateTime $createdCustomers): void {
+    public function setCreatedCustomers($createdCustomers): void {
         $this->createdCustomers = $createdCustomers;
     }
 
-    public function setUpdatedCustomers(DateTime $updatedCustomers): void {
+    public function setUpdatedCustomers($updatedCustomers): void {
         $this->updatedCustomers = $updatedCustomers;
     }
 }

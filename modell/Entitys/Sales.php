@@ -2,14 +2,14 @@
 
 class Sales {
 
-    private int $idSale;
-    private int $idCustomerSale;
-    private float $totalSale;
-    private int $activeSale;
-    private DateTime $createdSale;
-    private DateTime $updatedSale;
+    private $idSale;
+    private $idCustomerSale;
+    private $totalSale;
+    private $activeSale;
+    private $createdSale;
+    private $updatedSale;
 
-    public function __construct(int $idSale, int $idCustomerSale, float $totalSale, int $activeSale, DateTime $createdSale, DateTime $updatedSale) {
+    public function __construct($idSale, $idCustomerSale, $totalSale, $activeSale, $createdSale, $updatedSale) {
         $this->idSale = $idSale;
         $this->idCustomerSale = $idCustomerSale;
         $this->totalSale = $totalSale;
@@ -18,51 +18,51 @@ class Sales {
         $this->updatedSale = $updatedSale;
     }
 
-    public function getIdSale(): int {
+    public function getIdSale() {
         return $this->idSale;
     }
 
-    public function getIdCustomerSale(): int {
+    public function getIdCustomerSale() {
         return $this->idCustomerSale;
     }
 
-    public function getTotalSale(): float {
+    public function getTotalSale() {
         return $this->totalSale;
     }
 
-    public function getActiveSale(): int {
+    public function getActiveSale() {
         return $this->activeSale;
     }
 
-    public function getCreatedSale(): DateTime {
+    public function getCreatedSale() {
         return $this->createdSale;
     }
 
-    public function getUpdatedSale(): DateTime {
+    public function getUpdatedSale() {
         return $this->updatedSale;
     }
 
-    public function setIdSale(int $idSale): void {
+    public function setIdSale($idSale): void {
         $this->idSale = $idSale;
     }
 
-    public function setIdCustomerSale(int $idCustomerSale): void {
+    public function setIdCustomerSale($idCustomerSale): void {
         $this->idCustomerSale = $idCustomerSale;
     }
 
-    public function setTotalSale(float $totalSale): void {
+    public function setTotalSale($totalSale): void {
         $this->totalSale = $totalSale;
     }
 
-    public function setActiveSale(int $activeSale): void {
+    public function setActiveSale($activeSale): void {
         $this->activeSale = $activeSale;
     }
 
-    public function setCreatedSale(DateTime $createdSale): void {
+    public function setCreatedSale($createdSale): void {
         $this->createdSale = $createdSale;
     }
 
-    public function setUpdatedSale(DateTime $updatedSale): void {
+    public function setUpdatedSale($updatedSale): void {
         $this->updatedSale = $updatedSale;
     }
 }

@@ -2,15 +2,15 @@
 
 class Users {
 
-    private int $idUser;
-    private string $nameUser;
-    private string $passwordUser;
-    private int $idUserRoll;
-    private int $activeUser;
-    private DateTime $createdUser;
-    private DateTime $updatedUser;
+    private $idUser;
+    private $nameUser;
+    private $passwordUser;
+    private $idUserRoll;
+    private $activeUser;
+    private $createdUser;
+    private $updatedUser;
 
-    public function __construct(int $idUser, string $nameUser, string $passwordUser, int $idUserRoll, int $activeUser, DateTime $createdUser, DateTime $updatedUser) {
+    public function __construct($idUser, $nameUser, $passwordUser, $idUserRoll, $activeUser, $createdUser, $updatedUser) {
         $this->idUser = $idUser;
         $this->nameUser = $nameUser;
         $this->passwordUser = $passwordUser;
@@ -20,59 +20,59 @@ class Users {
         $this->updatedUser = $updatedUser;
     }
 
-    public function getIdUser(): int {
+    public function getIdUser() {
         return $this->idUser;
     }
 
-    public function getNameUser(): string {
+    public function getNameUser() {
         return $this->nameUser;
     }
 
-    public function getPasswordUser(): string {
+    public function getPasswordUser() {
         return $this->passwordUser;
     }
 
-    public function getIdUserRoll(): int {
+    public function getIdUserRoll() {
         return $this->idUserRoll;
     }
 
-    public function getActiveUser(): int {
+    public function getActiveUser() {
         return $this->activeUser;
     }
 
-    public function getCreatedUser(): DateTime {
+    public function getCreatedUser() {
         return $this->createdUser;
     }
 
-    public function getUpdatedUser(): DateTime {
+    public function getUpdatedUser() {
         return $this->updatedUser;
     }
 
-    public function setIdUser(int $idUser): void {
+    public function setIdUser($idUser): void {
         $this->idUser = $idUser;
     }
 
-    public function setNameUser(string $nameUser): void {
+    public function setNameUser($nameUser): void {
         $this->nameUser = $nameUser;
     }
 
-    public function setPasswordUser(string $passwordUser): void {
+    public function setPasswordUser($passwordUser): void {
         $this->passwordUser = $passwordUser;
     }
 
-    public function setIdUserRoll(int $idUserRoll): void {
+    public function setIdUserRoll($idUserRoll): void {
         $this->idUserRoll = $idUserRoll;
     }
 
-    public function setActiveUser(int $activeUser): void {
+    public function setActiveUser($activeUser): void {
         $this->activeUser = $activeUser;
     }
 
-    public function setCreatedUser(DateTime $createdUser): void {
+    public function setCreatedUser($createdUser): void {
         $this->createdUser = $createdUser;
     }
 
-    public function setUpdatedUser(DateTime $updatedUser): void {
+    public function setUpdatedUser($updatedUser): void {
         $this->updatedUser = $updatedUser;
     }
 }

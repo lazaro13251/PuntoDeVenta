@@ -2,13 +2,13 @@
 
 class Department {
 
-    private int $idDepartment;
-    private string $nameDepartment;
-    private int $activeDepartment;
-    private DateTime $createdDepartment;
-    private DateTime $updatedDepartment;
+    private $idDepartment;
+    private $nameDepartment;
+    private $activeDepartment;
+    private $createdDepartment;
+    private $updatedDepartment;
 
-    public function __construct(int $idDepartment, string $nameDepartment, int $activeDepartment, DateTime $createdDepartment, DateTime $updatedDepartment) {
+    public function __construct($idDepartment, $nameDepartment, $activeDepartment, $createdDepartment, $updatedDepartment) {
         $this->idDepartment = $idDepartment;
         $this->nameDepartment = $nameDepartment;
         $this->activeDepartment = $activeDepartment;
@@ -16,43 +16,43 @@ class Department {
         $this->updatedDepartment = $updatedDepartment;
     }
 
-    public function getIdDepartment(): int {
+    public function getIdDepartment() {
         return $this->idDepartment;
     }
 
-    public function getNameDepartment(): string {
+    public function getNameDepartment() {
         return $this->nameDepartment;
     }
 
-    public function getActiveDepartment(): int {
+    public function getActiveDepartment() {
         return $this->activeDepartment;
     }
 
-    public function getCreatedDepartment(): DateTime {
+    public function getCreatedDepartment() {
         return $this->createdDepartment;
     }
 
-    public function getUpdatedDepartment(): DateTime {
+    public function getUpdatedDepartment() {
         return $this->updatedDepartment;
     }
 
-    public function setIdDepartment(int $idDepartment): void {
+    public function setIdDepartment($idDepartment): void {
         $this->idDepartment = $idDepartment;
     }
 
-    public function setNameDepartment(string $nameDepartment): void {
+    public function setNameDepartment($nameDepartment): void {
         $this->nameDepartment = $nameDepartment;
     }
 
-    public function setActiveDepartment(int $activeDepartment): void {
+    public function setActiveDepartment($activeDepartment): void {
         $this->activeDepartment = $activeDepartment;
     }
 
-    public function setCreatedDepartment(DateTime $createdDepartment): void {
+    public function setCreatedDepartment($createdDepartment): void {
         $this->createdDepartment = $createdDepartment;
     }
 
-    public function setUpdatedDepartment(DateTime $updatedDepartment): void {
+    public function setUpdatedDepartment($updatedDepartment): void {
         $this->updatedDepartment = $updatedDepartment;
     }
 }

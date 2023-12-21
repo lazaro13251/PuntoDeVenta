@@ -2,13 +2,13 @@
 
 class ArticlesMeasure {
 
-    private int $idArticlesMeasure;
-    private string $nameArticlesMeasure;
-    private int $activeArticlesMeasure;
-    private DateTime $createdArticlesMeasure;
-    private DateTime $updatedArticlesMeasure;
+    private $idArticlesMeasure;
+    private $nameArticlesMeasure;
+    private $activeArticlesMeasure;
+    private $createdArticlesMeasure;
+    private $updatedArticlesMeasure;
 
-    public function __construct(int $idArticlesMeasure, string $nameArticlesMeasure, int $activeArticlesMeasure, DateTime $createdArticlesMeasure, DateTime $updatedArticlesMeasure) {
+    public function __construct($idArticlesMeasure, $nameArticlesMeasure, $activeArticlesMeasure, $createdArticlesMeasure, $updatedArticlesMeasure) {
         $this->idArticlesMeasure = $idArticlesMeasure;
         $this->nameArticlesMeasure = $nameArticlesMeasure;
         $this->activeArticlesMeasure = $activeArticlesMeasure;
@@ -16,43 +16,43 @@ class ArticlesMeasure {
         $this->updatedArticlesMeasure = $updatedArticlesMeasure;
     }
 
-    public function getIdArticlesMeasure(): int {
+    public function getIdArticlesMeasure() {
         return $this->idArticlesMeasure;
     }
 
-    public function getNameArticlesMeasure(): string {
+    public function getNameArticlesMeasure() {
         return $this->nameArticlesMeasure;
     }
 
-    public function getActiveArticlesMeasure(): int {
+    public function getActiveArticlesMeasure() {
         return $this->activeArticlesMeasure;
     }
 
-    public function getCreatedArticlesMeasure(): DateTime {
+    public function getCreatedArticlesMeasure() {
         return $this->createdArticlesMeasure;
     }
 
-    public function getUpdatedArticlesMeasure(): DateTime {
+    public function getUpdatedArticlesMeasure() {
         return $this->updatedArticlesMeasure;
     }
 
-    public function setIdArticlesMeasure(int $idArticlesMeasure): void {
+    public function setIdArticlesMeasure($idArticlesMeasure): void {
         $this->idArticlesMeasure = $idArticlesMeasure;
     }
 
-    public function setNameArticlesMeasure(string $nameArticlesMeasure): void {
+    public function setNameArticlesMeasure($nameArticlesMeasure): void {
         $this->nameArticlesMeasure = $nameArticlesMeasure;
     }
 
-    public function setActiveArticlesMeasure(int $activeArticlesMeasure): void {
+    public function setActiveArticlesMeasure($activeArticlesMeasure): void {
         $this->activeArticlesMeasure = $activeArticlesMeasure;
     }
 
-    public function setCreatedArticlesMeasure(DateTime $createdArticlesMeasure): void {
+    public function setCreatedArticlesMeasure($createdArticlesMeasure): void {
         $this->createdArticlesMeasure = $createdArticlesMeasure;
     }
 
-    public function setUpdatedArticlesMeasure(DateTime $updatedArticlesMeasure): void {
+    public function setUpdatedArticlesMeasure($updatedArticlesMeasure): void {
         $this->updatedArticlesMeasure = $updatedArticlesMeasure;
     }
 }

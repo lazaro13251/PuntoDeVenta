@@ -2,16 +2,16 @@
 
 class SalesDetail {
 
-    private int $idSaleDetail;
-    private int $idSale;
-    private int $idArticleSaleDetail;
-    private float $numberArticleSaleDetail;
-    private float $subtotalSaleDetail;
-    private int $activeSaleDetail;
-    private DateTime $createdSaleDetail;
-    private DateTime $updatedSaleDetail;
+    private $idSaleDetail;
+    private $idSale;
+    private $idArticleSaleDetail;
+    private $numberArticleSaleDetail;
+    private $subtotalSaleDetail;
+    private $activeSaleDetail;
+    private $createdSaleDetail;
+    private $updatedSaleDetail;
 
-    public function __construct(int $idSaleDetail, int $idSale, int $idArticleSaleDetail, float $numberArticleSaleDetail, float $subtotalSaleDetail, int $activeSaleDetail, DateTime $createdSaleDetail, DateTime $updatedSaleDetail) {
+    public function __construct($idSaleDetail, $idSale, $idArticleSaleDetail, $numberArticleSaleDetail, $subtotalSaleDetail, $activeSaleDetail, $createdSaleDetail, $updatedSaleDetail) {
         $this->idSaleDetail = $idSaleDetail;
         $this->idSale = $idSale;
         $this->idArticleSaleDetail = $idArticleSaleDetail;
@@ -22,67 +22,67 @@ class SalesDetail {
         $this->updatedSaleDetail = $updatedSaleDetail;
     }
 
-    public function getIdSaleDetail(): int {
+    public function getIdSaleDetail() {
         return $this->idSaleDetail;
     }
 
-    public function getIdSale(): int {
+    public function getIdSale() {
         return $this->idSale;
     }
 
-    public function getIdArticleSaleDetail(): int {
+    public function getIdArticleSaleDetail() {
         return $this->idArticleSaleDetail;
     }
 
-    public function getNumberArticleSaleDetail(): float {
+    public function getNumberArticleSaleDetail() {
         return $this->numberArticleSaleDetail;
     }
 
-    public function getSubtotalSaleDetail(): float {
+    public function getSubtotalSaleDetail() {
         return $this->subtotalSaleDetail;
     }
 
-    public function getActiveSaleDetail(): int {
+    public function getActiveSaleDetail() {
         return $this->activeSaleDetail;
     }
 
-    public function getCreatedSaleDetail(): DateTime {
+    public function getCreatedSaleDetail() {
         return $this->createdSaleDetail;
     }
 
-    public function getUpdatedSaleDetail(): DateTime {
+    public function getUpdatedSaleDetail() {
         return $this->updatedSaleDetail;
     }
 
-    public function setIdSaleDetail(int $idSaleDetail): void {
+    public function setIdSaleDetail($idSaleDetail): void {
         $this->idSaleDetail = $idSaleDetail;
     }
 
-    public function setIdSale(int $idSale): void {
+    public function setIdSale($idSale): void {
         $this->idSale = $idSale;
     }
 
-    public function setIdArticleSaleDetail(int $idArticleSaleDetail): void {
+    public function setIdArticleSaleDetail($idArticleSaleDetail): void {
         $this->idArticleSaleDetail = $idArticleSaleDetail;
     }
 
-    public function setNumberArticleSaleDetail(float $numberArticleSaleDetail): void {
+    public function setNumberArticleSaleDetail($numberArticleSaleDetail): void {
         $this->numberArticleSaleDetail = $numberArticleSaleDetail;
     }
 
-    public function setSubtotalSaleDetail(float $subtotalSaleDetail): void {
+    public function setSubtotalSaleDetail($subtotalSaleDetail): void {
         $this->subtotalSaleDetail = $subtotalSaleDetail;
     }
 
-    public function setActiveSaleDetail(int $activeSaleDetail): void {
+    public function setActiveSaleDetail($activeSaleDetail): void {
         $this->activeSaleDetail = $activeSaleDetail;
     }
 
-    public function setCreatedSaleDetail(DateTime $createdSaleDetail): void {
+    public function setCreatedSaleDetail($createdSaleDetail): void {
         $this->createdSaleDetail = $createdSaleDetail;
     }
 
-    public function setUpdatedSaleDetail(DateTime $updatedSaleDetail): void {
+    public function setUpdatedSaleDetail($updatedSaleDetail): void {
         $this->updatedSaleDetail = $updatedSaleDetail;
     }
 }
