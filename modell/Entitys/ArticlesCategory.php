@@ -2,13 +2,13 @@
 
 class ArticlesCategory {
 
-    private int $idArticleCategory;
-    private string $nameArticleCategory;
-    private int $activeArticleCategory;
-    private string $createdArticleCategory;
-    private string $updatedArticleCategory;
+    private $idArticleCategory;
+    private $nameArticleCategory;
+    private $activeArticleCategory;
+    private $createdArticleCategory;
+    private $updatedArticleCategory;
 
-    public function __construct(int $idArticleCategory, string $nameArticleCategory, int $activeArticleCategory, string $createdArticleCategory, string $updatedArticleCategory) {
+    public function __construct($idArticleCategory, $nameArticleCategory, $activeArticleCategory, $createdArticleCategory, $updatedArticleCategory) {
         $this->idArticleCategory = $idArticleCategory;
         $this->nameArticleCategory = $nameArticleCategory;
         $this->activeArticleCategory = $activeArticleCategory;
@@ -16,43 +16,43 @@ class ArticlesCategory {
         $this->updatedArticleCategory = $updatedArticleCategory;
     }
 
-    public function getIdArticleCategory(): int {
+    public function getIdArticleCategory() {
         return $this->idArticleCategory;
     }
 
-    public function getNameArticleCategory(): string {
+    public function getNameArticleCategory() {
         return $this->nameArticleCategory;
     }
 
-    public function getActiveArticleCategory(): int {
+    public function getActiveArticleCategory() {
         return $this->activeArticleCategory;
     }
 
-    public function getCreatedArticleCategory(): string {
+    public function getCreatedArticleCategory() {
         return $this->createdArticleCategory;
     }
 
-    public function getUpdatedArticleCategory(): string {
+    public function getUpdatedArticleCategory() {
         return $this->updatedArticleCategory;
     }
 
-    public function setIdArticleCategory(int $idArticleCategory): void {
+    public function setIdArticleCategory($idArticleCategory): void {
         $this->idArticleCategory = $idArticleCategory;
     }
 
-    public function setNameArticleCategory(string $nameArticleCategory): void {
+    public function setNameArticleCategory($nameArticleCategory): void {
         $this->nameArticleCategory = $nameArticleCategory;
     }
 
-    public function setActiveArticleCategory(int $activeArticleCategory): void {
+    public function setActiveArticleCategory($activeArticleCategory): void {
         $this->activeArticleCategory = $activeArticleCategory;
     }
 
-    public function setCreatedArticleCategory(string $createdArticleCategory): void {
+    public function setCreatedArticleCategory($createdArticleCategory): void {
         $this->createdArticleCategory = $createdArticleCategory;
     }
 
-    public function setUpdatedArticleCategory(string $updatedArticleCategory): void {
+    public function setUpdatedArticleCategory($updatedArticleCategory): void {
         $this->updatedArticleCategory = $updatedArticleCategory;
     }
 }

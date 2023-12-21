@@ -2,22 +2,22 @@
 
 class Articles {
 
-    private int $idArticle;
-    private string $upsArticle;
-    private string $nameArticle;
-    private float $costeArticle;
-    private float $saleArticle;
-    private int $categoryArticle;
-    private int $departmentArticle;
-    private string $imageArticle;
-    private int $measureArticle;
-    private string $internalReferenceArticle;
-    private string $internalNotesArticle;
-    private int $activeArticle;
-    private string $createdArticle;
-    private string $updatedArticle;
+    private $idArticle;
+    private $upsArticle;
+    private $nameArticle;
+    private $costeArticle;
+    private $saleArticle;
+    private $categoryArticle;
+    private $departmentArticle;
+    private $imageArticle;
+    private $measureArticle;
+    private $internalReferenceArticle;
+    private $internalNotesArticle;
+    private $activeArticle;
+    private $createdArticle;
+    private $updatedArticle;
 
-    public function __construct(int $idArticle, string $upsArticle, string $nameArticle, float $costeArticle, float $saleArticle, int $categoryArticle, int $departmentArticle, string $imageArticle, int $measureArticle, string $internalReferenceArticle, string $internalNotesArticle, int $activeArticle, string $createdArticle, string $updatedArticle) {
+    public function __construct($idArticle, $upsArticle, $nameArticle, $costeArticle, $saleArticle, $categoryArticle, $departmentArticle, $imageArticle, $measureArticle, $internalReferenceArticle, $internalNotesArticle, $activeArticle, $createdArticle, $updatedArticle) {
         $this->idArticle = $idArticle;
         $this->upsArticle = $upsArticle;
         $this->nameArticle = $nameArticle;
@@ -34,115 +34,115 @@ class Articles {
         $this->updatedArticle = $updatedArticle;
     }
 
-    public function getIdArticle(): int {
+    public function getIdArticle() {
         return $this->idArticle;
     }
 
-    public function getUpsArticle(): string {
+    public function getUpsArticle() {
         return $this->upsArticle;
     }
 
-    public function getNameArticle(): string {
+    public function getNameArticle() {
         return $this->nameArticle;
     }
 
-    public function getCosteArticle(): float {
+    public function getCosteArticle() {
         return $this->costeArticle;
     }
 
-    public function getSaleArticle(): float {
+    public function getSaleArticle() {
         return $this->saleArticle;
     }
 
-    public function getCategoryArticle(): int {
+    public function getCategoryArticle() {
         return $this->categoryArticle;
     }
 
-    public function getDepartmentArticle(): int {
+    public function getDepartmentArticle() {
         return $this->departmentArticle;
     }
 
-    public function getImageArticle(): string {
+    public function getImageArticle() {
         return $this->imageArticle;
     }
 
-    public function getMeasureArticle(): int {
+    public function getMeasureArticle() {
         return $this->measureArticle;
     }
 
-    public function getInternalReferenceArticle(): string {
+    public function getInternalReferenceArticle() {
         return $this->internalReferenceArticle;
     }
 
-    public function getInternalNotesArticle(): string {
+    public function getInternalNotesArticle() {
         return $this->internalNotesArticle;
     }
 
-    public function getActiveArticle(): int {
+    public function getActiveArticle() {
         return $this->activeArticle;
     }
 
-    public function getCreatedArticle(): DateTime {
+    public function getCreatedArticle() {
         return $this->createdArticle;
     }
 
-    public function getUpdatedArticle(): DateTime {
+    public function getUpdatedArticle() {
         return $this->updatedArticle;
     }
 
-    public function setIdArticle(int $idArticle): void {
+    public function setIdArticle($idArticle): void {
         $this->idArticle = $idArticle;
     }
 
-    public function setUpsArticle(string $upsArticle): void {
+    public function setUpsArticle($upsArticle): void {
         $this->upsArticle = $upsArticle;
     }
 
-    public function setNameArticle(string $nameArticle): void {
+    public function setNameArticle($nameArticle): void {
         $this->nameArticle = $nameArticle;
     }
 
-    public function setCosteArticle(float $costeArticle): void {
+    public function setCosteArticle($costeArticle): void {
         $this->costeArticle = $costeArticle;
     }
 
-    public function setSaleArticle(float $saleArticle): void {
+    public function setSaleArticle($saleArticle): void {
         $this->saleArticle = $saleArticle;
     }
 
-    public function setCategoryArticle(int $categoryArticle): void {
+    public function setCategoryArticle($categoryArticle): void {
         $this->categoryArticle = $categoryArticle;
     }
 
-    public function setDepartmentArticle(int $departmentArticle): void {
+    public function setDepartmentArticle($departmentArticle): void {
         $this->departmentArticle = $departmentArticle;
     }
 
-    public function setImageArticle(string $imageArticle): void {
+    public function setImageArticle($imageArticle): void {
         $this->imageArticle = $imageArticle;
     }
 
-    public function setMeasureArticle(int $measureArticle): void {
+    public function setMeasureArticle($measureArticle): void {
         $this->measureArticle = $measureArticle;
     }
 
-    public function setInternalReferenceArticle(string $internalReferenceArticle): void {
+    public function setInternalReferenceArticle($internalReferenceArticle): void {
         $this->internalReferenceArticle = $internalReferenceArticle;
     }
 
-    public function setInternalNotesArticle(string $internalNotesArticle): void {
+    public function setInternalNotesArticle($internalNotesArticle): void {
         $this->internalNotesArticle = $internalNotesArticle;
     }
 
-    public function setActiveArticle(int $activeArticle): void {
+    public function setActiveArticle($activeArticle): void {
         $this->activeArticle = $activeArticle;
     }
 
-    public function setCreatedArticle(DateTime $createdArticle): void {
+    public function setCreatedArticle($createdArticle): void {
         $this->createdArticle = $createdArticle;
     }
 
-    public function setUpdatedArticle(DateTime $updatedArticle): void {
+    public function setUpdatedArticle($updatedArticle): void {
         $this->updatedArticle = $updatedArticle;
     }
 }

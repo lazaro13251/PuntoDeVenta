@@ -2,13 +2,13 @@
 
 class Inventory {
 
-    private int $idInventory;
-    private int $idArticleInventory;
-    private int $stockArticleInventory;
-    private int $minimumInventory;
-    private DateTime $updatedInventory;
+    private $idInventory;
+    private $idArticleInventory;
+    private $stockArticleInventory;
+    private $minimumInventory;
+    private $updatedInventory;
 
-    public function __construct(int $idInventory, int $idArticleInventory, int $stockArticleInventory, int $minimumInventory, DateTime $updatedInventory) {
+    public function __construct($idInventory, $idArticleInventory, $stockArticleInventory, $minimumInventory, $updatedInventory) {
         $this->idInventory = $idInventory;
         $this->idArticleInventory = $idArticleInventory;
         $this->stockArticleInventory = $stockArticleInventory;
@@ -16,43 +16,43 @@ class Inventory {
         $this->updatedInventory = $updatedInventory;
     }
 
-    public function getIdInventory(): int {
+    public function getIdInventory() {
         return $this->idInventory;
     }
 
-    public function getIdArticleInventory(): int {
+    public function getIdArticleInventory() {
         return $this->idArticleInventory;
     }
 
-    public function getStockArticleInventory(): int {
+    public function getStockArticleInventory() {
         return $this->stockArticleInventory;
     }
 
-    public function getMinimumInventory(): int {
+    public function getMinimumInventory() {
         return $this->minimumInventory;
     }
 
-    public function getUpdatedInventory(): DateTime {
+    public function getUpdatedInventory() {
         return $this->updatedInventory;
     }
 
-    public function setIdInventory(int $idInventory): void {
+    public function setIdInventory($idInventory): void {
         $this->idInventory = $idInventory;
     }
 
-    public function setIdArticleInventory(int $idArticleInventory): void {
+    public function setIdArticleInventory($idArticleInventory): void {
         $this->idArticleInventory = $idArticleInventory;
     }
 
-    public function setStockArticleInventory(int $stockArticleInventory): void {
+    public function setStockArticleInventory($stockArticleInventory): void {
         $this->stockArticleInventory = $stockArticleInventory;
     }
 
-    public function setMinimumInventory(int $minimumInventory): void {
+    public function setMinimumInventory($minimumInventory): void {
         $this->minimumInventory = $minimumInventory;
     }
 
-    public function setUpdatedInventory(DateTime $updatedInventory): void {
+    public function setUpdatedInventory($updatedInventory): void {
         $this->updatedInventory = $updatedInventory;
     }
 }

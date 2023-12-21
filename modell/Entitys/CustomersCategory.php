@@ -2,13 +2,13 @@
 
 class CustomersCategory {
 
-    private int $idCustomersCategory;
-    private string $nameCustomersCategory;
-    private int $activeCustomersCategory;
-    private DateTime $createdCustomersCategory;
-    private DateTime $updatedCustomersCategory;
+    private $idCustomersCategory;
+    private $nameCustomersCategory;
+    private $activeCustomersCategory;
+    private $createdCustomersCategory;
+    private $updatedCustomersCategory;
 
-    public function __construct(int $idCustomersCategory, string $nameCustomersCategory, int $activeCustomersCategory, DateTime $createdCustomersCategory, DateTime $updatedCustomersCategory) {
+    public function __construct($idCustomersCategory, $nameCustomersCategory, $activeCustomersCategory, $createdCustomersCategory, $updatedCustomersCategory) {
         $this->idCustomersCategory = $idCustomersCategory;
         $this->nameCustomersCategory = $nameCustomersCategory;
         $this->activeCustomersCategory = $activeCustomersCategory;
@@ -16,43 +16,43 @@ class CustomersCategory {
         $this->updatedCustomersCategory = $updatedCustomersCategory;
     }
 
-    public function getIdCustomersCategory(): int {
+    public function getIdCustomersCategory() {
         return $this->idCustomersCategory;
     }
 
-    public function getNameCustomersCategory(): string {
+    public function getNameCustomersCategory() {
         return $this->nameCustomersCategory;
     }
 
-    public function getActiveCustomersCategory(): int {
+    public function getActiveCustomersCategory() {
         return $this->activeCustomersCategory;
     }
 
-    public function getCreatedCustomersCategory(): DateTime {
+    public function getCreatedCustomersCategory() {
         return $this->createdCustomersCategory;
     }
 
-    public function getUpdatedCustomersCategory(): DateTime {
+    public function getUpdatedCustomersCategory() {
         return $this->updatedCustomersCategory;
     }
 
-    public function setIdCustomersCategory(int $idCustomersCategory): void {
+    public function setIdCustomersCategory($idCustomersCategory): void {
         $this->idCustomersCategory = $idCustomersCategory;
     }
 
-    public function setNameCustomersCategory(string $nameCustomersCategory): void {
+    public function setNameCustomersCategory($nameCustomersCategory): void {
         $this->nameCustomersCategory = $nameCustomersCategory;
     }
 
-    public function setActiveCustomersCategory(int $activeCustomersCategory): void {
+    public function setActiveCustomersCategory($activeCustomersCategory): void {
         $this->activeCustomersCategory = $activeCustomersCategory;
     }
 
-    public function setCreatedCustomersCategory(DateTime $createdCustomersCategory): void {
+    public function setCreatedCustomersCategory($createdCustomersCategory): void {
         $this->createdCustomersCategory = $createdCustomersCategory;
     }
 
-    public function setUpdatedCustomersCategory(DateTime $updatedCustomersCategory): void {
+    public function setUpdatedCustomersCategory($updatedCustomersCategory): void {
         $this->updatedCustomersCategory = $updatedCustomersCategory;
     }
 }

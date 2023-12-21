@@ -2,13 +2,13 @@
 
 class UsersRolls {
 
-    private int $idUserRoll;
-    private string $nameUserRoll;
-    private int $activeUserRoll;
-    private DateTime $createdUserRoll;
-    private DateTime $updatedUserRoll;
+    private $idUserRoll;
+    private $nameUserRoll;
+    private $activeUserRoll;
+    private $createdUserRoll;
+    private $updatedUserRoll;
 
-    public function __construct(int $idUserRoll, string $nameUserRoll, int $activeUserRoll, DateTime $createdUserRoll, DateTime $updatedUserRoll) {
+    public function __construct($idUserRoll, $nameUserRoll, $activeUserRoll, $createdUserRoll, $updatedUserRoll) {
         $this->idUserRoll = $idUserRoll;
         $this->nameUserRoll = $nameUserRoll;
         $this->activeUserRoll = $activeUserRoll;
@@ -16,43 +16,43 @@ class UsersRolls {
         $this->updatedUserRoll = $updatedUserRoll;
     }
 
-    public function getIdUserRoll(): int {
+    public function getIdUserRoll() {
         return $this->idUserRoll;
     }
 
-    public function getNameUserRoll(): string {
+    public function getNameUserRoll() {
         return $this->nameUserRoll;
     }
 
-    public function getActiveUserRoll(): int {
+    public function getActiveUserRoll() {
         return $this->activeUserRoll;
     }
 
-    public function getCreatedUserRoll(): DateTime {
+    public function getCreatedUserRoll() {
         return $this->createdUserRoll;
     }
 
-    public function getUpdatedUserRoll(): DateTime {
+    public function getUpdatedUserRoll() {
         return $this->updatedUserRoll;
     }
 
-    public function setIdUserRoll(int $idUserRoll): void {
+    public function setIdUserRoll($idUserRoll): void {
         $this->idUserRoll = $idUserRoll;
     }
 
-    public function setNameUserRoll(string $nameUserRoll): void {
+    public function setNameUserRoll($nameUserRoll): void {
         $this->nameUserRoll = $nameUserRoll;
     }
 
-    public function setActiveUserRoll(int $activeUserRoll): void {
+    public function setActiveUserRoll($activeUserRoll): void {
         $this->activeUserRoll = $activeUserRoll;
     }
 
-    public function setCreatedUserRoll(DateTime $createdUserRoll): void {
+    public function setCreatedUserRoll($createdUserRoll): void {
         $this->createdUserRoll = $createdUserRoll;
     }
 
-    public function setUpdatedUserRoll(DateTime $updatedUserRoll): void {
+    public function setUpdatedUserRoll($updatedUserRoll): void {
         $this->updatedUserRoll = $updatedUserRoll;
     }
 }
