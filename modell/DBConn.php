@@ -12,7 +12,6 @@ class DBConn {
                 echo "Error: " . $e->getMessage();
             }
         }
-
         return self::$conexion;
     }
 }
