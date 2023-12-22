@@ -1,10 +1,14 @@
 <?php
 require_once 'modell/DAO/ArticlesDAO.php';
 require_once 'modell/DAO/ArticlesCategoryDAO.php';
+require_once 'modell/DAO/DepartmentDAO.php';
+require_once 'modell/DAO/ArticlesMeasureDAO.php';
 
 try {
     $articlesDAO = (new ArticlesDAO())->ReadAll();
     $articlesCategoryDAO = (new ArticlesCategoryDAO)->ReadAll();
+    $departmentDAO = (new DepartmentDAO)->ReadAll();
+    $articlesMeasureDAO = (new ArticlesMeasureDAO())->ReadAll();
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage();
 }
@@ -82,32 +86,32 @@ try {
                     <form action="TableArticles.php" method="POST" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col">
-                                <label for="input_nombre" class="form-label">UPS:</label>
-                                <input type="text" class="form-control border border-3" aria-label="Nombre" name="input_nombre" id="input_nombre" required autofocus>
+                                <label for="input_ups" class="form-label">UPS:</label>
+                                <input type="text" class="form-control border border-3" aria-label="Nombre" name="input_ups" id="input_ups" required autofocus>
                             </div>
                             <div class="col">
-                                <label for="input_apellido_paterno" class="form-label">Nombre:</label>
-                                <input type="text" class="form-control border border-3" aria-label="Apellido paterno" name="input_apellido_paterno" id="input_apellido_paterno" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <label for="input_nombre" class="form-label">Precio costo:</label>
-                                <input type="text" class="form-control border border-3" aria-label="Nombre" name="input_nombre" id="input_nombre" required autofocus>
-                            </div>
-                            <div class="col">
-                                <label for="input_apellido_paterno" class="form-label">Precio Venta:</label>
-                                <input type="text" class="form-control border border-3" aria-label="Apellido paterno" name="input_apellido_paterno" id="input_apellido_paterno" required>
-                            </div>
-                            <div class="col">
-                                <label for="input_nombre" class="form-label">Referencia interna:</label>
-                                <input type="text" class="form-control border border-3" aria-label="Nombre" name="input_nombre" id="input_nombre" required autofocus>
+                                <label for="input_nombre" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control border border-3" aria-label="Apellido paterno" name="input_nombre" id="input_nombre" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="input_especialidad" class="form-label">Categoria:</label>
-                                <select class="form-select border border-3" aria-label="Especialidad" name="input_especialidad" id="input_especialidad" required>
+                                <label for="input_precio_costo" class="form-label">Precio costo:</label>
+                                <input type="text" class="form-control border border-3" aria-label="Nombre" name="input_precio_costo" id="input_precio_costo" required autofocus>
+                            </div>
+                            <div class="col">
+                                <label for="input_precio_venta" class="form-label">Precio Venta:</label>
+                                <input type="text" class="form-control border border-3" aria-label="Apellido paterno" name="input_precio_venta" id="input_precio_venta" required>
+                            </div>
+                            <div class="col">
+                                <label for="input_referencia_interna" class="form-label">Referencia interna:</label>
+                                <input type="text" class="form-control border border-3" aria-label="Nombre" name="input_referencia_interna" id="input_referencia_interna" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="input_categoria" class="form-label">Categoria:</label>
+                                <select class="form-select border border-3" aria-label="Especialidad" name="input_categoria" id="input_categoria" required>
                                     <option selected disabled value="">Abre este menú para seleccionar una categoria</option>
                                     <?php foreach ($articlesCategoryDAO as $category) : ?>
                                         <option value="<?= $category->getIdArticleCategory(); ?>"><?= $category->getNameArticleCategory(); ?></option>
@@ -117,11 +121,11 @@ try {
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="input_especialidad" class="form-label">Departamento:</label>
-                                <select class="form-select border border-3" aria-label="Especialidad" name="input_especialidad" id="input_especialidad" required>
+                                <label for="input_departamento" class="form-label">Departamento:</label>
+                                <select class="form-select border border-3" aria-label="Departamento" name="input_departamento" id="input_departamento" required>
                                     <option selected disabled value="">Abre este menú para seleccionar un departamento</option>
-                                    <?php foreach ($specialtiesDAO as $specialty) : ?>
-                                        <option value="<?php echo $specialty->getIdSpeciality(); ?>"><?php echo $specialty->getNameSpeciality(); ?></option>
+                                    <?php foreach ($departmentDAO as $department) : ?>
+                                        <option value="<?= $department->getIdDepartment(); ?>"><?= $department->getNameDepartment(); ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
@@ -131,16 +135,16 @@ try {
                                 <label for="input_especialidad" class="form-label">Medida:</label>
                                 <select class="form-select border border-3" aria-label="Especialidad" name="input_especialidad" id="input_especialidad" required>
                                     <option selected disabled value="">Abre este menú para seleccionar una medida</option>
-                                    <?php foreach ($specialtiesDAO as $specialty) : ?>
-                                        <option value="<?php echo $specialty->getIdSpeciality(); ?>"><?php echo $specialty->getNameSpeciality(); ?></option>
+                                    <?php foreach ($articlesMeasureDAO as $measure) : ?>
+                                        <option value="<?= $measure->getIdArticlesMeasure(); ?>"><?= $measure->getNameArticlesMeasure(); ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="floatingTextarea2">Notas internas:</label>
-                                <textarea class="form-control" placeholder="Ingrese sus notas" id="floatingTextarea2" style="height: 100px"></textarea>
+                                <label for="input_notas_internas">Notas internas:</label>
+                                <textarea class="form-control border border-3" placeholder="Ingrese sus notas" id="input_notas_internas" name="input_notas_internas" style="height: 100px"></textarea>
                             </div>
                         </div>
                 </div>

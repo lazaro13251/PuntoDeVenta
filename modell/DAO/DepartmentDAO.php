@@ -1,9 +1,9 @@
 <?php
 
 require_once 'modell/General/IMethods.php';
-require_once 'modell/Entitys/ArticlesMeasure.php';
+require_once 'modell/Entitys/Department.php';
 
-class ArticlesMeasureDAO implements IMethods {
+class DepartmentDAO implements IMethods {
 
     private Tables $table;
 
@@ -28,14 +28,14 @@ class ArticlesMeasureDAO implements IMethods {
             $array = [];
 
             foreach ($results as $result) :
-                $measure = new ArticlesMeasure(
+                $department = new Department(
                         $result[$columns[0]],
                         $result[$columns[1]],
                         $result[$columns[2]],
                         $result[$columns[3]],
                         $result[$columns[4]],
                 );
-                $array[] = $measure;
+                $array[] = $department;
             endforeach;
             return $array;
         } catch (Exception $exc) {
@@ -48,9 +48,9 @@ class ArticlesMeasureDAO implements IMethods {
     }
 
     public function buildTable(): \Tables {
-        $table = new Tables('table_articles_measure');
-        $table->addCamposTabla('id_articles_measure');
-        $table->addCamposTabla('column_name_measure');
+        $table = new Tables('table_department');
+        $table->addCamposTabla('id_department');
+        $table->addCamposTabla('column_name_department');
         $table->addCamposTabla('active');
         $table->addCamposTabla('created');
         $table->addCamposTabla('updated');

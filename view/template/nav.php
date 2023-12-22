@@ -24,8 +24,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Clientes</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="articulos">Mis Clientes</a>
-                            <a class="dropdown-item" href="articulos/categoria">Categoria</a>
+                            <a class="dropdown-item" href="clientes.php">Mis Clientes</a>
+                            <a class="dropdown-item" href="cliente-categoria.php">Categoria</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
