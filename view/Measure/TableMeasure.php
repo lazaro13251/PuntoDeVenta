@@ -1,10 +1,8 @@
 <?php
-require_once 'modell/DAO/ArticlesCategoryDAO.php';
+require_once 'modell/DAO/ArticlesMeasureDAO.php';
 
 try {
-    echo '<pre>';
-    $categoryDAO = (new ArticlesCategoryDAO())->ReadAll();
-    echo '</pre>';
+    $articlesMeasureDAO = (new ArticlesMeasureDAO())->ReadAll();
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage();
 }
@@ -34,14 +32,14 @@ try {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($categoryDAO as $category) : ?>
+                            <?php foreach ($articlesMeasureDAO as $measure) : ?>
                                 <tr>
-                                    <td> <?php echo $category->getIdArticleCategory(); ?> </td>
-                                    <td> <?php echo $category->getNameArticleCategory(); ?> </td>
+                                    <td> <?= $measure->getIdArticlesMeasure(); ?> </td>
+                                    <td> <?= $measure->getNameArticlesMeasure(); ?> </td>
                                     <td>
                                         <div class="d-grid gap-2 d-md-flex justify-content-center">
-                                            <button class="btn btn-dark btn-sm" onclick="window.location.href = '?id=<?php echo $category->getIdArticleCategory(); ?>'">EDITAR</button>
-                                            <button class="btn btn-danger btn-sm" onclick="eliminarArticulo(<?php echo $category->getIdArticleCategory(); ?>)">ELIMINAR</button>
+                                            <button class="btn btn-dark btn-sm" onclick="window.location.href = '?id=<?= $measure->getIdArticlesMeasure(); ?>'">EDITAR</button>
+                                            <button class="btn btn-danger btn-sm" onclick="eliminarArticulo(<?= $measure->getIdArticlesMeasure(); ?>)">ELIMINAR</button>
                                         </div>
                                     </td>
                                 </tr>
