@@ -31,7 +31,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Departamantos</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="articulos">Mis departamantos</a>
+                            <a class="dropdown-item" href="departamento.php">Mis departamantos</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
