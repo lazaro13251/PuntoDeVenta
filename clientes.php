@@ -1,5 +1,5 @@
 <?php
 
-require_once './controller/ControllerArticles.php';
+require_once './controller/ControllerCustomers.php';
 
-(new ControllerArticles())->ViewArticlesMain();
+(new ControllerCustomers())->ViewCustomersMain();
