@@ -43,7 +43,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Usuarios</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="articulos">Mis usuarios</a>
+                            <a class="dropdown-item" href="usuarios.php">Mis usuarios</a>
                         </div>
                     </li>
                 </ul>

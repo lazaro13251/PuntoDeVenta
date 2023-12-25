@@ -2,11 +2,11 @@
 
 class CustomersCategory {
 
-    private $idCustomersCategory;
-    private $nameCustomersCategory;
-    private $activeCustomersCategory;
-    private $createdCustomersCategory;
-    private $updatedCustomersCategory;
+    public $idCustomersCategory;
+    public $nameCustomersCategory;
+    public $activeCustomersCategory;
+    public $createdCustomersCategory;
+    public $updatedCustomersCategory;
 
     public function __construct($idCustomersCategory, $nameCustomersCategory, $activeCustomersCategory, $createdCustomersCategory, $updatedCustomersCategory) {
         $this->idCustomersCategory = $idCustomersCategory;
