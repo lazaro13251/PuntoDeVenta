@@ -2,17 +2,17 @@
 
 class Customers {
 
-    private $idCustomers;
-    private $nameCustomers;
-    private $paternalCustomers;
-    private $maternalCustomers;
-    private $mailCustomers;
-    private $phoneCustomers;
-    private $birthCustomers;
-    private $categoryCustomers;
-    private $activeCustomers;
-    private $createdCustomers;
-    private $updatedCustomers;
+    public $idCustomers;
+    public $nameCustomers;
+    public $paternalCustomers;
+    public $maternalCustomers;
+    public $mailCustomers;
+    public $phoneCustomers;
+    public $birthCustomers;
+    public $categoryCustomers;
+    public $activeCustomers;
+    public $createdCustomers;
+    public $updatedCustomers;
 
     public function __construct($idCustomers, $nameCustomers, $paternalCustomers, $maternalCustomers, $mailCustomers, $phoneCustomers, $birthCustomers, $categoryCustomers, $activeCustomers, $createdCustomers, $updatedCustomers) {
         $this->idCustomers = $idCustomers;

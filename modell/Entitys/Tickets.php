@@ -3,14 +3,16 @@
 class Tickets {
 
     public $idTicket;
-    public $idSale;
+    public $idSaleTicket;
+    public $totalTicket;
     public $activeTicket;
     public $createdTicket;
     public $updateTicket;
 
-    public function __construct($idTicket, $idSale, $activeTicket, $createdTicket, $updateTicket) {
+    public function __construct($idTicket, $idSaleTicket, $totalTicket, $activeTicket, $createdTicket, $updateTicket) {
         $this->idTicket = $idTicket;
-        $this->idSale = $idSale;
+        $this->idSaleTicket = $idSaleTicket;
+        $this->totalTicket = $totalTicket;
         $this->activeTicket = $activeTicket;
         $this->createdTicket = $createdTicket;
         $this->updateTicket = $updateTicket;
@@ -20,8 +22,12 @@ class Tickets {
         return $this->idTicket;
     }
 
-    public function getIdSale() {
-        return $this->idSale;
+    public function getIdSaleTicket() {
+        return $this->idSaleTicket;
+    }
+
+    public function getTotalTicket() {
+        return $this->totalTicket;
     }
 
     public function getActiveTicket() {
@@ -40,8 +46,12 @@ class Tickets {
         $this->idTicket = $idTicket;
     }
 
-    public function setIdSale($idSale): void {
-        $this->idSale = $idSale;
+    public function setIdSaleTicket($idSaleTicket): void {
+        $this->idSaleTicket = $idSaleTicket;
+    }
+
+    public function setTotalTicket($totalTicket): void {
+        $this->totalTicket = $totalTicket;
     }
 
     public function setActiveTicket($activeTicket): void {

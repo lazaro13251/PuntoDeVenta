@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gestion de Clientes</title>
+        <title>Gestion de Usuarios</title>
         <?php include 'view/template/header.php'; ?>
     </head>
     <body>
@@ -26,7 +26,7 @@
                 <div class="card border-dark mb-3">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h1 class="display-3">Control de clientes</h1>
+                            <h1 class="display-3">Control de Usuarios</h1>
                             <div class="gap-2 d-md-flex">
                                 <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#form-new-article">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-file-earmark-plus-fill" viewBox="0 0 16 16">
@@ -42,7 +42,7 @@
                                 <thead>
                                     <tr class="table-dark">
                                         <th>Nombre</th>
-                                        <th>Categoria</th>
+                                        <th>Roll</th>
                                         <th>Creado</th>
                                         <th>Opciones</th>
                                     </tr>
