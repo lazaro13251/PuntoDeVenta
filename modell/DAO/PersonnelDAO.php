@@ -1,7 +1,7 @@
 <?php
 
-require 'modell/General/IMethods.php';
-require 'modell/Entitys/Personnel.php';
+require_once 'modell/General/IMethods.php';
+require_once 'modell/Entitys/Personnel.php';
 
 class PersonnelDAO implements IMethods {
 
