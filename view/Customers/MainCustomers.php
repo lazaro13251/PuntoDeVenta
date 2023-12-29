@@ -43,7 +43,6 @@
                                     <tr class="table-dark">
                                         <th>Nombre</th>
                                         <th>Categoria</th>
-                                        <th>Creado</th>
                                         <th>Opciones</th>
                                     </tr>
                                 </thead>
@@ -65,8 +64,7 @@
                                     </td>
                                     <td>
                                         <p class="fw-normal mb-1"><?= $category = ((new CustomersCategoryDAO())->ReadByID($customer->getCategoryCustomers()))->getNameCustomersCategory(); ?> </p>
-                                    </td>
-                                    <td> <?= $customer->getCreatedCustomers(); ?> </td>
+                                    </td>                                    
                                     <td>
                                         <div class="d-grid gap-2 d-md-flex justify-content-center">
                                             <button class="btn btn-dark btn-sm" onclick="window.location.href = 'editar-articulo.php?id=<?= $customer->getIdCustomers(); ?>'">

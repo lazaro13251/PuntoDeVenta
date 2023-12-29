@@ -2,4 +2,4 @@
 
 require_once './controller/ControllerArticles.php';
 
-(new ControllerArticles)->ViewMeasureMain();
+(new ControllerArticles())->ViewCategoryMain();
