@@ -1,7 +1,7 @@
 <?php
 
-require 'modell/DBConn.php';
-require 'modell/Tables.php';
+require_once __DIR__ . '/../DBConn.php';
+require_once __DIR__ . '/../Tables.php';
 
 interface IMethods {
 

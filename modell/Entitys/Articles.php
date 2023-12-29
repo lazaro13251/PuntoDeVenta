@@ -2,20 +2,20 @@
 
 class Articles {
 
-    private $idArticle;
-    private $upsArticle;
-    private $nameArticle;
-    private $costeArticle;
-    private $saleArticle;
-    private $categoryArticle;
-    private $departmentArticle;
-    private $imageArticle;
-    private $measureArticle;
-    private $internalReferenceArticle;
-    private $internalNotesArticle;
-    private $activeArticle;
-    private $createdArticle;
-    private $updatedArticle;
+    public $idArticle;
+    public $upsArticle;
+    public $nameArticle;
+    public $costeArticle;
+    public $saleArticle;
+    public $categoryArticle;
+    public $departmentArticle;
+    public $imageArticle;
+    public $measureArticle;
+    public $internalReferenceArticle;
+    public $internalNotesArticle;
+    public $activeArticle;
+    public $createdArticle;
+    public $updatedArticle;
 
     public function __construct($idArticle, $upsArticle, $nameArticle, $costeArticle, $saleArticle, $categoryArticle, $departmentArticle, $imageArticle, $measureArticle, $internalReferenceArticle, $internalNotesArticle, $activeArticle, $createdArticle, $updatedArticle) {
         $this->idArticle = $idArticle;
