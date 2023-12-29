@@ -7,7 +7,7 @@ class DBConn {
     public static function obtenerConexion() {
         if (!isset(self::$conexion)) {
             try {
-                self::$conexion = new PDO('mysql:host=192.168.100.56;dbname=purificadora', 'root', 'GalfLazaro7168');
+                self::$conexion = new PDO('mysql:host=127.0.0.1; dbname=purificadora', 'root', '');
             } catch (PDOException $e) {
                 echo "Error: " . $e->getMessage();
             }
