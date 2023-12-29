@@ -3,6 +3,6 @@
 class ControllerArticles {
 
     public function ViewArticlesMain() {
-        require_once 'view/Articles/MainArticles.php';
+        require_once __DIR__ . '/../view/Articles/MainArticles.php';
     }
 }

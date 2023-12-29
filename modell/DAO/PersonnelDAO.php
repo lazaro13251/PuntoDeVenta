@@ -1,7 +1,7 @@
 <?php
 
-require_once 'modell/General/IMethods.php';
-require_once 'modell/Entitys/Personnel.php';
+require_once __DIR__ . '/../General/IMethods.php';
+require_once __DIR__ . '/../Entitys/Personnel.php';
 
 class PersonnelDAO implements IMethods {
 

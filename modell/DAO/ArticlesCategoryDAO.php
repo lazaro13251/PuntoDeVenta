@@ -1,7 +1,7 @@
 <?php
 
-require_once 'modell/General/IMethods.php';
-require_once 'modell/Entitys/ArticlesCategory.php';
+require_once __DIR__ . '/../General/IMethods.php';
+require_once __DIR__ . '/../Entitys/ArticlesCategory.php';
 
 class ArticlesCategoryDAO implements IMethods {
 

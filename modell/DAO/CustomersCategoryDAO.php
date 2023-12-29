@@ -1,7 +1,7 @@
 <?php
 
-require_once 'modell/General/IMethods.php';
-require_once 'modell/Entitys/CustomersCategory.php';
+require_once __DIR__ . '/../General/IMethods.php';
+require_once __DIR__ . '/../Entitys/CustomersCategory.php';
 
 class CustomersCategoryDAO implements IMethods {
 

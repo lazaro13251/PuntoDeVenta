@@ -1,7 +1,7 @@
 <?php
 
-require 'modell/General/IMethods.php';
-require 'modell/Entitys/Inventory.php';
+require_once __DIR__ . '/../General/IMethods.php';
+require_once __DIR__ . '/../Entitys/Inventory.php';
 
 class InventoryDAO implements IMethods {
 
