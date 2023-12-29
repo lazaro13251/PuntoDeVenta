@@ -26,19 +26,18 @@ class TickectDAO implements IMethods {
             echo "Error en la consulta: " . $exc->getMessage();
             return false;
         }
-        
     }
 
     public function DeleteByID(int $id): bool {
-         try {
-            $stmt = DBConn::obtenerConexion()->prepare("UPDATE $this->table SET active = 0 WHERE $this->columnID = :id");
-            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        try {
+            $columns = $this->table->getCamposTabla();
+            $stmt = DBConn::obtenerConexion()->prepare("UPDATE {$this->table->getNombreTabla()} SET $columns[3] = 0 WHERE $columns[0] = :ID");
+            $stmt->bindParam(':ID', $id, PDO::PARAM_INT);
             $stmt->execute();
             return $stmt->rowCount() > 0;
         } catch (PDOException $exc) {
             throw new Exception("Error de base de datos: " . $exc->getMessage());
         }
-        
     }
 
     public function ReadAll(): array {
@@ -57,7 +56,6 @@ class TickectDAO implements IMethods {
                         $result[$columns[3]],
                         $result[$columns[4]],
                         $result[$columns[5]]
-          
                 );
                 $array[] = $tickets;
             endforeach;
@@ -70,7 +68,7 @@ class TickectDAO implements IMethods {
     }
 
     public function ReadByID(int $id): ?object {
-         try {
+        try {
             $columns = $this->table->getCamposTabla();
             $stmt = DBConn::obtenerConexion()->prepare("SELECT * FROM {$this->table->getNombreTabla()} WHERE $columns[3] = 1 AND $columns[0] = :ID");
             $stmt->bindParam(':ID', $id, PDO::PARAM_INT);
@@ -84,7 +82,6 @@ class TickectDAO implements IMethods {
                         $result[$columns[3]],
                         $result[$columns[4]],
                         $result[$columns[5]]
- 
                 );
             } else {
                 echo '<pre>';
@@ -96,11 +93,9 @@ class TickectDAO implements IMethods {
             echo ("Error de base de datos: " . $exc->getMessage());
             echo '</pre>';
         }
-        
     }
 
     public function buildTable(): \Tables {
-
         $table = new Tables('table_tickets');
         $table->addCamposTabla('id_ticket');
         $table->addCamposTabla('column_total_ticket');
@@ -110,5 +105,4 @@ class TickectDAO implements IMethods {
         $table->addCamposTabla('updated');
         return $table;
     }
-
 }

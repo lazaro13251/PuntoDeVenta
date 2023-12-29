@@ -1,7 +1,7 @@
 <?php
 
-require_once 'modell/General/IMethods.php';
-require_once 'modell/Entitys/Department.php';
+require_once __DIR__ . '/../General/IMethods.php';
+require_once __DIR__ . '/../Entitys/Department.php';
 
 class DepartmentDAO implements IMethods {
 
@@ -12,7 +12,18 @@ class DepartmentDAO implements IMethods {
     }
 
     public function Create(object $object): bool {
-        
+        try {
+            $columns = $this->table->getCamposTabla();
+            $stmt = DBConn::obtenerConexion()->prepare("INSERT INTO {$this->table->getNombreTabla()} ($columns[0], $columns[1], $columns[2], $columns[3], $columns[4]) VALUES (NULL, ?, 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)");
+            $stmt->bindValue(1, $object->getNameDepartment(), PDO::PARAM_STR);
+            $stmt->execute();
+            return true;
+        } catch (Exception $exc) {
+            echo '<pre>';
+            print_r($exc->getMessage());
+            echo '<pre>';
+            return false;
+        }
     }
 
     public function DeleteByID(int $id): bool {

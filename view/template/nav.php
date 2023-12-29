@@ -16,7 +16,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Articulos</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="articulos.php">Mis articulos</a>
-                            <a class="dropdown-item" href="categoria.php">Categoria</a>
+                            <a class="dropdown-item" href="articulos-categoria.php">Categoria</a>
                             <a class="dropdown-item" href="medicion.php">Medicion</a>
                             <a class="dropdown-item" href="inventario.php">Inventario</a>
                         </div>
