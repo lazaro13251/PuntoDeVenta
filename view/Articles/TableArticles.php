@@ -83,21 +83,21 @@ try {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="TableArticles.php" method="POST" enctype="multipart/form-data">
+                    <form action="modell/Service/ServiceArticles.php" method="POST">
                         <div class="row">
                             <div class="col">
                                 <label for="input_ups" class="form-label">UPS:</label>
-                                <input type="text" class="form-control border border-3" aria-label="Nombre" name="input_ups" id="input_ups" required autofocus>
+                                <input type="text" class="form-control border border-3" aria-label="UPS" name="input_ups" id="input_ups" required>
                             </div>
                             <div class="col">
-                                <label for="input_nombre" class="form-label">Nombre:</label>
-                                <input type="text" class="form-control border border-3" aria-label="Apellido paterno" name="input_nombre" id="input_nombre" required>
+                                <label for="input_name" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control border border-3" aria-label="Nombre del articulo" name="input_name" id="input_name" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="input_precio_costo" class="form-label">Precio costo:</label>
-                                <input type="text" class="form-control border border-3" aria-label="Nombre" name="input_precio_costo" id="input_precio_costo" required autofocus>
+                                <label for="input_coste" class="form-label">Precio costo:</label>
+                                <input type="text" class="form-control border border-3" aria-label="Nombre" name="input_coste" id="input_coste" required>
                             </div>
                             <div class="col">
                                 <label for="input_precio_venta" class="form-label">Precio Venta:</label>
@@ -132,8 +132,8 @@ try {
                         </div>
                         <div class="row">
                             <div class="col">
-                                <label for="input_especialidad" class="form-label">Medida:</label>
-                                <select class="form-select border border-3" aria-label="Especialidad" name="input_especialidad" id="input_especialidad" required>
+                                <label for="input_medida" class="form-label">Medida:</label>
+                                <select class="form-select border border-3" aria-label="Especialidad" name="input_medida" id="input_medida" required>
                                     <option selected disabled value="">Abre este menú para seleccionar una medida</option>
                                     <?php foreach ($articlesMeasureDAO as $measure) : ?>
                                         <option value="<?= $measure->getIdArticlesMeasure(); ?>"><?= $measure->getNameArticlesMeasure(); ?></option>
