@@ -13,5 +13,7 @@ interface IMethods {
 
     public function ReadByID(int $id): ?object;
 
+    public function UpdateByID(int $id, object $object): bool;
+
     public function DeleteByID(int $id): bool;
 }

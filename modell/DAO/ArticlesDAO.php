@@ -35,8 +35,9 @@ class ArticlesDAO implements IMethods {
 
     public function DeleteByID(int $id): bool {
         try {
-            $stmt = DBConn::obtenerConexion()->prepare("UPDATE $this->table SET active = 0 WHERE $this->columnID = :id");
-            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $columns = $this->table->getCamposTabla();
+            $stmt = DBConn::obtenerConexion()->prepare("UPDATE {$this->table->getNombreTabla()} SET $columns[11] = 0 WHERE $columns[0] = :ID");
+            $stmt->bindParam(':ID', $id, PDO::PARAM_INT);
             $stmt->execute();
             return $stmt->rowCount() > 0;
         } catch (PDOException $exc) {
@@ -132,5 +133,30 @@ class ArticlesDAO implements IMethods {
         $table->addCamposTabla('created');
         $table->addCamposTabla('updated');
         return $table;
+    }
+
+    public function UpdateByID(int $id, object $object): bool {
+        try {
+            $columns = $this->table->getCamposTabla();
+            $stmt = DBConn::obtenerConexion()->prepare("UPDATE {$this->table->getNombreTabla()} SET $columns[1] = ?, $columns[2] = ?, $columns[3] = ?, $columns[4] = ?, $columns[5] = ?, $columns[6] = ?, $columns[7] = ?, $columns[8] = ?, $columns[9] = ?, $columns[10] = ?  WHERE $columns[11] = 1 AND $columns[0] = ?;");
+            $stmt->bindValue(1, $object->getUpsArticle(), PDO::PARAM_STR);
+            $stmt->bindValue(2, $object->getNameArticle(), PDO::PARAM_STR);
+            $stmt->bindValue(3, $object->getCosteArticle(), PDO::PARAM_INT);
+            $stmt->bindValue(4, $object->getSaleArticle(), PDO::PARAM_INT);
+            $stmt->bindValue(5, $object->getCategoryArticle(), PDO::PARAM_INT);
+            $stmt->bindValue(6, $object->getDepartmentArticle(), PDO::PARAM_INT);
+            $stmt->bindValue(7, $object->getImageArticle(), PDO::PARAM_STR);
+            $stmt->bindValue(8, $object->getMeasureArticle(), PDO::PARAM_INT);
+            $stmt->bindValue(9, $object->getInternalReferenceArticle(), PDO::PARAM_STR);
+            $stmt->bindValue(10, $object->getInternalNotesArticle(), PDO::PARAM_STR);
+            $stmt->bindValue(11, $id, PDO::PARAM_INT);
+            $stmt->execute();
+            return true;
+        } catch (Exception $exc) {
+            echo '<pre>';
+            print_r($exc->getTraceAsString());
+            echo '</pre>';
+            return false;
+        }
     }
 }

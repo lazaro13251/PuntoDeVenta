@@ -88,4 +88,8 @@ class ArticlesCategoryDAO implements IMethods {
         $table->addCamposTabla('updated');
         return $table;
     }
+
+    public function UpdateByID(int $id, object $object): bool {
+        
+    }
 }
